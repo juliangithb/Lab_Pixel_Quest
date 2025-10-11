@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.Collections.LowLevel.Unsafe;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UIElements;
@@ -11,6 +12,8 @@ public class NewBehaviourScript : MonoBehaviour
     Rigidbody2D rb;
     public float speed = 25;
     //public string Level2 = "Geo_Quest_Scene_2";
+
+    SpriteRenderer sr;
    
     //Personal GeoQuest
     public string GQL2 = "New Scene 2";
@@ -24,6 +27,7 @@ public class NewBehaviourScript : MonoBehaviour
         Debug.Log(One + Two);
 
         rb = GetComponent<Rigidbody2D>();
+        sr = rb.GetComponent<SpriteRenderer>();
     }
 
     // Update is called once per frame
@@ -48,6 +52,11 @@ public class NewBehaviourScript : MonoBehaviour
 
         float xInput = Input.GetAxis("Horizontal");
         rb.velocity = new Vector2 (xInput * speed, rb.velocity.y);
+
+        if (Input.GetKeyDown(KeyCode.Alpha1)) { sr.color = Color.yellow; }
+        if (Input.GetKeyDown(KeyCode.Alpha2)) { sr.color = Color.green; }
+        if (Input.GetKeyDown(KeyCode.Alpha3)) { sr.color = Color.blue; }
+        if (Input.GetKeyDown(KeyCode.Alpha0)) { sr.color = Color.white; }
     }
     private void OnTriggerEnter2D(Collider2D collision)
     {
