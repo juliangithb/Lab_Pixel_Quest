@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UIElements;
 
 public class NewBehaviourScript : MonoBehaviour
@@ -9,7 +10,11 @@ public class NewBehaviourScript : MonoBehaviour
     int var1 = 3;
     Rigidbody2D rb;
     public float speed = 25;
-    
+    //public string Level2 = "Geo_Quest_Scene_2";
+   
+    //Personal GeoQuest
+    public string GQL2 = "New Scene 2";
+
     // Start is called before the first frame update
     void Start()
     {
@@ -46,6 +51,21 @@ public class NewBehaviourScript : MonoBehaviour
     }
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        Debug.Log("Hit");
+
+        switch (collision.tag)
+        {
+            case "Death":
+                {
+                    string thisLevel = SceneManager.GetActiveScene().name;
+                    SceneManager.LoadScene(thisLevel);
+                    break;
+                }
+            case "Finish":
+                {
+                    SceneManager.LoadScene(GQL2);
+                    break;
+
+                }
+        }
     }
 }
