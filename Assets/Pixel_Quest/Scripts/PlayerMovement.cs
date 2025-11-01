@@ -10,13 +10,13 @@ public class PlayerMovement : MonoBehaviour
     Rigidbody2D rb;
     public float Speed = 25;
 
-    public SpriteRenderer spriteRenderer;
+    private SpriteRenderer sr;
 
     // Start is called before the first frame update
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
-        spriteRenderer = rb.GetComponent<SpriteRenderer>();
+        sr = transform.GetComponentInChildren<SpriteRenderer>();
     }
 
     // Update is called once per frame
@@ -24,5 +24,13 @@ public class PlayerMovement : MonoBehaviour
     {
         float xInput = Input.GetAxis("Horizontal");
         rb.velocity = new Vector2(xInput * Speed, rb.velocity.y);
+        if (xInput > 0)
+        {
+            sr.flipX = true;
+        }
+        else if (xInput < 0)
+        {
+            sr.flipX = false;
+        }
     }
 }
