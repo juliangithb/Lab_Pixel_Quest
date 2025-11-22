@@ -196,5 +196,5 @@ MonoBehaviour:
   rigidbody2D: {fileID: 1306876364857980075}
   minSpeed: 1
   maxSpeed: 4
-  deathTime: 30
+  deathTime: 2
   playerBullet: 1
