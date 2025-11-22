@@ -26,11 +26,11 @@ public class PlayerMovement : MonoBehaviour
         rb.velocity = new Vector2(xInput * Speed, rb.velocity.y);
         if (xInput > 0)
         {
-            sr.flipX = true;
+            sr.flipX = false;
         }
         else if (xInput < 0)
         {
-            sr.flipX = false;
+            sr.flipX = true;
         }
     }
 }
