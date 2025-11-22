@@ -33,6 +33,7 @@ public class GeoController : MonoBehaviour
     {
         switch (collision.tag)
         {
+            //Next Level Script
             case "Finish":
                 {
                     SceneManager.LoadScene(nextLevel);
