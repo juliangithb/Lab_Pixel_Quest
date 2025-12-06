@@ -36,13 +36,6 @@ public class FinalGamePlayerMovement : MonoBehaviour
             sr.flipX = false;
         }
 
-        if (xInput != 0)
-        {
-            animator.SetBool("IsWalking", true);
-        }
-        else
-        {
-            animator.SetBool("IsWalking",false);
-        }
+        
     }
 }
