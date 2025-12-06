@@ -32,7 +32,7 @@ public class PlayerJump : MonoBehaviour
         new Vector2(CapsuleHeight, CapsuleRadius), CapsuleDirection2D.Horizontal,
         0, groundMask);
 
-        if (Input.GetKeyDown(KeyCode.Space) && (_groundCheck || _waterCheck))
+        if (Input.GetKeyDown(KeyCode.Space) || (Input.GetKeyDown(KeyCode.UpArrow)  && (_groundCheck || _waterCheck)))
         {
             rb.velocity = new Vector2(rb.velocity.x, JumpForce);
         }
