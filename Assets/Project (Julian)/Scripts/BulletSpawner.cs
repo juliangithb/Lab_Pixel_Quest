@@ -9,11 +9,11 @@ public class BulletSpawner: MonoBehaviour
     public GameObject preFab;
     private int index = 0;
     public int direction = 0;
-    public int amount = 2;
+    public int amount = 1;
 
 
     //Bullet Spawning Timers 
-    public float Timer = 30f;  //How long should it take till player can next bullet 
+    public float Timer = 15f;  //How long should it take till player can next bullet 
     private float _currentTime = 0.5f; //Counter to allow player to shoot 
     private bool _canSpawn = true;     //Tells us if we can shoot or not 
 
