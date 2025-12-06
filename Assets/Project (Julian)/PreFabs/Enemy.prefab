@@ -96,6 +96,7 @@ GameObject:
   - component: {fileID: 7851407795714027954}
   - component: {fileID: 1306876364857980075}
   - component: {fileID: 2442468950450188958}
+  - component: {fileID: 7593826861347247985}
   m_Layer: 0
   m_Name: Enemy
   m_TagString: Death
@@ -194,6 +195,23 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rigidbody2D: {fileID: 1306876364857980075}
+  minSpeed: 10
+  maxSpeed: 10
+  deathTime: 2
+  playerBullet: 1
+--- !u!114 &7593826861347247985
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8609101725108192800}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 65845428957cc89499e525cc8c6abec3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  rigidbody2D: {fileID: 0}
   minSpeed: 10
   maxSpeed: 10
   deathTime: 2
