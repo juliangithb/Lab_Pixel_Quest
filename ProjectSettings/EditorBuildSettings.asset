@@ -8,6 +8,12 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Geo_Quest/Scenes/New Scene.unity
     guid: ca7ccf0276a10014e8656f425c30519e
+  - enabled: 1
+    path: Assets/Raymonds final project assets/Scene/Test.unity
+    guid: e9599f6a3cf916c47b1bc11054ff0584
+  - enabled: 1
+    path: Assets/Raymonds final project assets/Scene/Test 1.unity
+    guid: dadb102183026224191c5e4e34d574e6
   - enabled: 0
     path: Assets/Scenes/MenuLevel.unity
     guid: 2fa55462fc719a848b33dd6097f67562
