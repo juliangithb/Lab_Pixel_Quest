@@ -11,10 +11,13 @@ public class FinalGamePlayerMovement : MonoBehaviour
     public float Speed = 25;
 
     private SpriteRenderer sr;
+    private Animator animator; 
 
     // Start is called before the first frame update
     void Start()
+
     {
+        animator = transform.GetComponentInChildren<Animator>();
         rb = GetComponent<Rigidbody2D>();
         sr = transform.GetComponentInChildren<SpriteRenderer>();
     }
@@ -31,6 +34,15 @@ public class FinalGamePlayerMovement : MonoBehaviour
         else if (xInput < 0)
         {
             sr.flipX = false;
+        }
+
+        if (xInput != 0)
+        {
+            animator.SetBool("IsWalking", true);
+        }
+        else
+        {
+            animator.SetBool("IsWalking",false);
         }
     }
 }

@@ -11,12 +11,14 @@ public class PlayerMovement : MonoBehaviour
     public float Speed = 25;
 
     private SpriteRenderer sr;
+    private Animator animator;
 
     // Start is called before the first frame update
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
         sr = transform.GetComponentInChildren<SpriteRenderer>();
+        animator = transform.GetComponentInChildren<Animator>();
     }
 
     // Update is called once per frame
@@ -31,6 +33,15 @@ public class PlayerMovement : MonoBehaviour
         else if (xInput < 0)
         {
             sr.flipX = true;
+        }
+
+        if (xInput != 0)
+        {
+            animator.SetBool("IsWalking", true);
+        }
+        else
+        {
+            animator.SetBool("IsWalking", false);
         }
     }
 }
